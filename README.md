@@ -58,3 +58,5 @@ If you want to use Visual Studio Code too, I recommend the following extensions
 * [VSCode Chrome Debug](https://github.com/Microsoft/vscode-chrome-debug)
 * [Angular 1 JavaScript and TypeScripts Snippets for VS Code](https://github.com/johnpapa/vscode-angular1-snippets)
 
+#Dependencies
+* [Angular UI Router](https://github.com/angular-ui/ui-router)
