@@ -58,7 +58,7 @@ If you want to use Visual Studio Code too, I recommend the following extensions
 * [VSCode Chrome Debug](https://github.com/Microsoft/vscode-chrome-debug)
 * [Angular 1 JavaScript and TypeScripts Snippets for VS Code](https://github.com/johnpapa/vscode-angular1-snippets)
 
-#Chrome Debug
+##Chrome Debug
 1. Close Google Chrome
 1. Open Google Chrome in with remote debugging port 9222
     
