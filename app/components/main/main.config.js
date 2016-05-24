@@ -6,7 +6,7 @@
         $stateProvider
             .state('app.main', {
                 url: '/',
-                templateUrl: '/components/main/main.view.html',
+                templateUrl: 'components/main/main.view.html',
                 controller: 'MainController',
                 controllerAs: 'ctrl'
             });
