@@ -58,3 +58,14 @@ If you want to use Visual Studio Code too, I recommend the following extensions
 * [VSCode Chrome Debug](https://github.com/Microsoft/vscode-chrome-debug)
 * [Angular 1 JavaScript and TypeScripts Snippets for VS Code](https://github.com/johnpapa/vscode-angular1-snippets)
 
+#Chrome Debug
+1. Close Google Chrome
+1. Open Google Chrome in with remote debugging port 9222
+    
+    * Windows:
+    `"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222`
+    * Linux:
+    `chromium --remote-debugging-port=9222`
+1. Run `grunt serve` in the command line
+1. You need to close all tabsin chrome, expect the one of your application
+1. Launch 'Attach with sourcemaps' from Visual Studio
