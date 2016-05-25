@@ -20,7 +20,8 @@ angular
     'ngTouch',
     'pc035860.scrollWatch',
     'ui.router',
-    'portfolio.main'
+    'portfolio.main',
+    'portfolio.headerSection'
   ])
   .config(function ($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/');
