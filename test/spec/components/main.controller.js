@@ -3,7 +3,7 @@
 describe('Controller: MainController', function () {
 
   
-  beforeEach(module('angularBoilerplateApp'));
+  beforeEach(module('portfolio'));
 
   var MainController,
     scope;

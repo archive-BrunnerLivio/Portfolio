@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('angularBoilerplateApp.main')
+        .module('portfolio.main')
         .controller('MainController', MainController);
 
     function MainController() {

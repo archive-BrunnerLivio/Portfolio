@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name angularBoilerplateApp
+ * @name portfolio
  * @description
- * # angularBoilerplateApp
+ * # portfolio
  *
  * Main module of the application.
  */
 angular
-  .module('angularBoilerplateApp', [
+  .module('portfolio', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -19,7 +19,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'angularBoilerplateApp.main'
+    'portfolio.main'
   ])
   .config(function ($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/');

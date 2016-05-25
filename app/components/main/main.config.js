@@ -12,6 +12,6 @@
             });
     }
     angular
-        .module('angularBoilerplateApp.main', [])
+        .module('portfolio.main', [])
         .config(MainConfig);
 })();
