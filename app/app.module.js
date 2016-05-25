@@ -18,6 +18,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'pc035860.scrollWatch',
     'ui.router',
     'portfolio.main'
   ])
