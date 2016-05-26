@@ -2,8 +2,27 @@
     'use strict';
 
 
-
-    function link() {
+    function update(element){
+        var $projectsBackground = element.find("#projects-background"),
+            $projectsTitle = element.find("#projects-title"),
+            $document = $(document),
+            $window = $(window),
+            $projects = $(".project");
+        $projectsBackground.css("opacity", 1 - ($document.scrollTop() - $projectsTitle.offset().top + $window.height()) / $projectsTitle.offset().top);
+        
+        $projects.each(function(index, project){ 
+            var $project = $(project),
+                $gradientBackground = $project.find(".gradient-background");
+            $gradientBackground.css("opacity", 1 - ($document.scrollTop() - $project.offset().top + $window.height() - $project.height()) / $project.offset().top);
+        });
+    }
+    
+    function link(scope, element) {
+        var $document = $(document);
+        $document.scroll(function(){
+            update(element);
+        });
+        update(element);
     }
     function projects() {
         var directive = {

@@ -30,7 +30,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'pc035860.scrollWatch',
     'ui.router',
     'pascalprecht.translate',
     'portfolio.routes',

@@ -12,9 +12,9 @@
     "angular-sanitize": "^1.4.0",
     "angular-touch": "^1.4.0",
     "angular-ui-router": "^0.3.0",
-    "angular-scroll-watch": "^0.6.1",
     "angular-translate": "^2.11.0",
-    "angular-translate-loader-static-files": "^2.11.0"
+    "angular-translate-loader-static-files": "^2.11.0",
+    "jquery": "^2.2.4"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"

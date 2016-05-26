@@ -10,5 +10,15 @@
             "bymyself":"by myself. When I reached the age of 16, I started an apprenticeship as a software engineer at",
             "RocheDiagnosticsInternationalAG": "Roche Diagnostics International AG"
         }
+    },
+    "projects":{
+        "projects": "projects",
+        "bierbendiger":{
+            "description": "This project is a school project. This webapplication presents a small social network, for me and my friends. You can on ",
+            "description1":" create challenges, upload media and more."
+        },
+        "silvieundwieni":{
+            "description":"My mother and her boyfriend went to Australia for 3 months. They wanted to share their adventure on a blog, so I created one with wordpress."
+        }
     }
 }
