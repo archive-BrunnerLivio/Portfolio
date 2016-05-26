@@ -9,10 +9,18 @@
             font-family: 'Oswald', sans-serif;
             text-align: center;
             margin:0;
-            font-size:80px;
             color:$title-color;;
             font-weight:bold;
             flex:1;
+            @media #{$large-and-up}{
+                font-size:150px;                
+            }
+            @media #{$medium-and-down}{
+                font-size:100px;
+            }
+            @media #{$small-and-down}{
+                font-size:70px;
+            }
         }
     }
     .header-background{
@@ -25,5 +33,9 @@
         left:0;
         top:0;
         z-index:-1;
+        @media #{$medium-and-down}{
+            background-size:cover;
+            background-position: center;
+        }
     }
 }
