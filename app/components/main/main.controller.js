@@ -1,11 +1,13 @@
 (function () {
     'use strict';
 
+
+
+    function MainController() {
+        
+    }
+    
     angular
         .module('portfolio.main')
         .controller('MainController', MainController);
-
-    function MainController() {
-        var vm = this;
-    }
 })();

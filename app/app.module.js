@@ -1,5 +1,17 @@
 'use strict';
+function RoutesConfig($urlRouterProvider, $stateProvider) {
 
+  $stateProvider
+    .state('app', {
+      abstract: true,
+      template: '<div ui-view></div>'
+    });
+    
+  $urlRouterProvider.otherwise('/');
+
+}
+angular.module('portfolio.routes', [])
+  .config(RoutesConfig);
 /**
  * @ngdoc overview
  * @name portfolio
@@ -21,19 +33,12 @@ angular
     'pc035860.scrollWatch',
     'ui.router',
     'pascalprecht.translate',
+    'portfolio.routes',
     'portfolio.main',
     'portfolio.headerSection',
     'portfolio.aboutMe'
   ])
   .config(function ($urlRouterProvider, $stateProvider, $translateProvider) {
-    $urlRouterProvider.otherwise('/');
-
-    $stateProvider
-      .state('app', {
-        abstract: true,
-        template: '<div ui-view></div>'
-      });
-
     $translateProvider.useStaticFilesLoader({
       prefix: 'translations/',
       suffix: '.json'

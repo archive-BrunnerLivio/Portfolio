@@ -1,7 +1,4 @@
 (function() {
-    'use strict';
-
-    angular.module('portfolio.aboutMe', [
-        
-    ]);
+    'use strict';        
+    angular.module('portfolio.aboutMe', []);
 })();

@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    function MainConfig($stateProvider) {
+    function RouteConfig($stateProvider) {
         
         $stateProvider
             .state('app.main', {
@@ -11,7 +11,9 @@
                 controllerAs: 'ctrl'
             });
     }
-    angular
-        .module('portfolio.main', [])
-        .config(MainConfig);
+    
+    angular.module('portfolio.routes')
+        .config(RouteConfig);
+        
+    angular.module('portfolio.main', []);
 })();

@@ -1,0 +1,14 @@
+html, body, .container, [ui-view]{
+    width:100%;
+    height:100%;
+}
+.section-title{
+    color:white;
+    font-family:$monospace;
+    margin-top:30px;
+    margin-bottom:30px;
+    text-align:center;
+    @media #{$small-and-down}{
+        margin-top:0px;   
+    }
+}

@@ -1,12 +1,10 @@
 (function () {
     'use strict';
 
-    angular
-        .module('portfolio.headerSection')
-        .directive('headerSection', headerSection);
 
-    function link(scope, element, attrs) {
-        
+
+    function link() {
+
     }
     function headerSection() {
         var directive = {
@@ -15,12 +13,15 @@
             controllerAs: 'ctrl',
             link: link,
             restrict: 'E',
-            templateUrl:"components/header-section/header-section.template.html",
-            replace:true,
+            templateUrl: "components/header-section/header-section.template.html",
+            replace: true,
             scope: {
             }
         };
         return directive;
     }
 
+    angular
+        .module('portfolio.headerSection')
+        .directive('headerSection', headerSection);
 })();

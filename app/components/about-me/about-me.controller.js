@@ -2,7 +2,6 @@
     'use strict';
 
     function AboutMeController() {
-        var vm = this;
     }
     
     angular

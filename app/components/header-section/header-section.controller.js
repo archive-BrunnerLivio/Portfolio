@@ -1,7 +1,6 @@
 (function () {
     'use strict';
     function HeaderSectionController() {
-        var vm = this;
     }
     angular
         .module('portfolio.headerSection')
