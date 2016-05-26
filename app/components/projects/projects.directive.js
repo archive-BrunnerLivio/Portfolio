@@ -4,24 +4,24 @@
 
 
     function link() {
-
     }
-    function headerSection() {
+    function projects() {
         var directive = {
             bindToController: true,
-            controller: 'HeaderSectionController',
+            controller: 'ProjectsController',
             controllerAs: 'ctrl',
             link: link,
             restrict: 'E',
-            templateUrl: 'components/header-section/header-section.template.html',
             replace: true,
+            templateUrl: 'components/projects/projects.template.html',
             scope: {
             }
         };
         return directive;
-    }
 
+
+    }
     angular
-        .module('portfolio.headerSection')
-        .directive('headerSection', headerSection);
+        .module('portfolio.projects')
+        .directive('projects', projects);
 })();
