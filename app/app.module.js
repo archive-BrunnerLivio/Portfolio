@@ -20,10 +20,11 @@ angular
     'ngTouch',
     'pc035860.scrollWatch',
     'ui.router',
+    'pascalprecht.translate',
     'portfolio.main',
     'portfolio.headerSection'
   ])
-  .config(function ($urlRouterProvider, $stateProvider) {
+  .config(function ($urlRouterProvider, $stateProvider, $translateProvider) {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
@@ -32,4 +33,9 @@ angular
         template: '<div ui-view></div>'
       });
 
+    $translateProvider.useStaticFilesLoader({
+      prefix: 'translations/',
+      suffix: '.json'
+    });
+    $translateProvider.preferredLanguage('en');
   });
