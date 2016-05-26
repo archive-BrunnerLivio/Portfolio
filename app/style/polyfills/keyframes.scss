@@ -1,0 +1,19 @@
+@import "compass";
+@include keyframes(slideIn) {
+  0% {
+  	left:-20px;
+    opacity:0;
+  }
+  100% {
+    left:0px;
+    opacity:1;
+  }
+}
+@include keyframes(fillWidth) {
+    0% {
+        width:0;
+    }
+    100% {
+        width:100%;
+    }
+}

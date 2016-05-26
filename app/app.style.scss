@@ -1,3 +1,10 @@
-@import 'components/app.components';
+@import 'compass';
+
+@import 'style/polyfills/variables';
+@import 'style/polyfills/keyframes';
+@import 'style/polyfills/mixins';
+
 @import 'style/base/reset';
 @import 'style/base/global';
+
+@import 'components/app.components';
