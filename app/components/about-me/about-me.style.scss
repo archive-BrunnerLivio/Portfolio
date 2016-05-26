@@ -1,9 +1,11 @@
 #about-me{
-    background-color:$dark-grey;
-    padding-top:80px;
-    padding-bottom:80px;
-    padding-left:10px;
-    padding-right:10px;
+    .content{
+        background-color:$dark-grey;
+        padding-top:80px;
+        padding-bottom:80px;
+        padding-left:10px;
+        padding-right:10px;
+    }
     .container {
         width:100%;
     }
@@ -26,5 +28,20 @@
         strong {
             font-weight:bolder;
         }
+    }
+    &-triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        //dont know why -17px, but it works. 
+        //strange rendering.
+        border-width: 200px calc(100vw - 17px) 0 0;
+        @media #{$medium-and-down}{
+            border-width: 150px calc(100vw - 17px) 0 0; 
+        }
+        @media #{$small-and-down}{
+            border-width: 100px calc(100vw - 17px) 0 0; 
+        }
+        border-color: $dark-grey transparent transparent transparent;
     }
 }
