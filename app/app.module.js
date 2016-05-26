@@ -22,7 +22,8 @@ angular
     'ui.router',
     'pascalprecht.translate',
     'portfolio.main',
-    'portfolio.headerSection'
+    'portfolio.headerSection',
+    'portfolio.aboutMe'
   ])
   .config(function ($urlRouterProvider, $stateProvider, $translateProvider) {
     $urlRouterProvider.otherwise('/');
