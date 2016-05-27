@@ -13,7 +13,7 @@
         $projects.each(function(index, project){ 
             var $project = $(project),
                 $gradientBackground = $project.find(".gradient-background");
-            $gradientBackground.css("opacity", 1 - ($document.scrollTop() - $project.offset().top + $window.height() - $project.height()) / $project.offset().top);
+            $gradientBackground.css("opacity", 1 - ($document.scrollTop() - $project.offset().top + $window.height() - ($project.height() / 2)) / $project.offset().top);
         });
     }
     
