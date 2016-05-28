@@ -30,12 +30,45 @@
     .project{
         width:100%;
         margin-top:70px;
+        &.right-sided-information{
+            .project-title{
+                float:right;
+            }
+            .project-image{
+                float:left;
+            }
+        }
+        &.left-sided-information{
+            .project-title{
+                float:right;
+                margin-right:40px;
+                margin-top:70px;
+                @media #{$medium-and-down}{
+                    width:100%;
+                    text-align:center;
+                    margin-left:0;
+                    margin-right:0;
+                    margin-top:0;
+                }
+            }
+            .project-image{
+                float:right;
+            }
+            .project-description{
+                margin-left:40px;
+                margin-top:50px;
+                
+                @media #{$medium-and-down}{
+                    margin:auto;   
+                }
+            }
+        }
         &-wrapper{
             @include clearfix;
         }
         &-title{
             font-family: 'Oswald', Arial, sans-serif;
-            font-size:60px;
+            font-size:50px;
             color:white;
             margin-right:40px;
             margin-top:40px;
@@ -45,6 +78,8 @@
                 text-align: center;
                 margin-right:0;
                 margin-bottom:30px;
+                margin-top:10px;                
+                font-size:28px;
             }
         }
         &-image{
@@ -58,7 +93,7 @@
             color:white;
             font-family: 'Roboto', Arial, Helvetica, sans-serif;
             float:left;
-            margin-top:200px;
+            margin-top:150px;
             margin-left:20px;
             width:20%;
             @media #{$medium-and-down}{
@@ -68,23 +103,6 @@
                 margin:auto;
             }
         }
-        &.right-sided-information{
-            .project-title{
-                float:right;
-            }
-            .project-image{
-                float:left;
-            }
-        }
-        &.left-sided-information{
-            .project-title{
-                float:right;
-                margin-right:40px;
-                margin-top:40px;
-            }
-            .project-image{
-                float:right;
-            }
-        }
+        
     }
 }
