@@ -64,13 +64,26 @@ a{
 }
 //Hint transperentize
 .hint{
-    &::before{
-        border-bottom-color:rgba(0,0,0,0.5);
-    }
     &::after{
         background:rgba(0,0,0,0.5);
-        //Fix, because with the transparent color you would see the arrow and the 
-        //element overlap.
-        top:calc(100% + 1px);
     }
+    &.hint--before{
+        &::before{
+            border-bottom-color:rgba(0,0,0,0.5);
+        }
+        &::after{
+            //Fix, because with the transparent color you would see the arrow and the 
+            //element overlap.
+            top:calc(100% + 1px);
+        }
+    }
+    &.hint--top{
+        &::before{
+            border-top-color:rgba(0,0,0,0.5);
+        }
+        &::after{
+            bottom:calc(100% + 1px);
+        }
+    }
+    
 }
