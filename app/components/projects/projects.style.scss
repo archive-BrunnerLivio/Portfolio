@@ -83,7 +83,6 @@
             }
         }
         &-image{
-            
             width:60%;
             @media #{$medium-and-down}{
                 width:100%;
@@ -103,6 +102,15 @@
                 margin:auto;
             }
         }
-        
+        &-technologies{
+            display:flex;
+            float:right;
+            justify-content: space-around;
+            margin-right:50px;
+            margin-top:20px;
+            .sprite{
+                margin:5px;
+            }
+        }
     }
 }

@@ -1,0 +1,53 @@
+.sprite {
+    background-image: url(../images/icons/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-angular {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -5px;
+}
+
+.sprite-bower {
+    width: 32px;
+    height: 28px;
+    background-position: -47px -5px;
+}
+
+.sprite-github {
+    width: 32px;
+    height: 32px;
+    background-position: -89px -5px;
+}
+
+.sprite-grunt {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -47px;
+}
+
+.sprite-php {
+    width: 32px;
+    height: 32px;
+    background-position: -47px -47px;
+}
+
+.sprite-sass {
+    width: 32px;
+    height: 24px;
+    background-position: -89px -47px;
+}
+
+.sprite-wordpress {
+    width: 32px;
+    height: 32px;
+    background-position: -89px -81px;
+}
+
+.sprite-yo {
+    width: 64px;
+    height: 61px;
+    background-position: -131px -5px;
+}
