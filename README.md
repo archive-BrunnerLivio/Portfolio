@@ -72,4 +72,8 @@ If you want to use Visual Studio Code too, I recommend the following extensions
 1. Launch 'Attach with sourcemaps' from Visual Studio
 
 #Dependencies
+* [Angular JS](https://angularjs.org/)
 * [Angular UI Router](https://github.com/angular-ui/ui-router)
+* [Angular Translate](http://angular-translate.github.io/)
+* [jQuery](https://jquery.com/)
+* [Hint.css](http://kushagragour.in/lab/hint/)

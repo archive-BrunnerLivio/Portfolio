@@ -5,6 +5,7 @@ html, body, .container, [ui-view]{
 body{
     height:3000px;
 }
+//Section Title
 .section-title{
     color:white;
     font-family:$monospace;
@@ -15,10 +16,12 @@ body{
         margin-top:0px;   
     }
 }
+//Paragraph default
 p{
     line-height: 28px;
     font-size:20px;
 }
+//Link Style
 a{
     color:#BBDEFB;
     text-decoration: none;
@@ -50,7 +53,7 @@ a{
         }
     }
 }
-
+//Selection Color
 ::selection {
     background-color: $primary-color;
     color: white;
@@ -58,4 +61,16 @@ a{
 ::-moz-selection {
     background-color: $primary-color;
     color: white;
+}
+//Hint transperentize
+.hint{
+    &::before{
+        border-bottom-color:rgba(0,0,0,0.5);
+    }
+    &::after{
+        background:rgba(0,0,0,0.5);
+        //Fix, because with the transparent color you would see the arrow and the 
+        //element overlap.
+        top:calc(100% + 1px);
+    }
 }
