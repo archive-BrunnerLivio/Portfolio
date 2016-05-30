@@ -36,7 +36,8 @@ angular
     'portfolio.main',
     'portfolio.headerSection',
     'portfolio.aboutMe',
-    'portfolio.projects'
+    'portfolio.projects',
+    'portfolio.timeline'
   ])
   .config(function ($urlRouterProvider, $stateProvider, $translateProvider) {
     $translateProvider.useStaticFilesLoader({
