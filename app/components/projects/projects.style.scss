@@ -30,6 +30,9 @@
     .project{
         width:100%;
         margin-top:70px;
+        &:last-child{
+            padding-bottom:50px;
+        }
         &.right-sided-information{
             .project-title{
                 float:right;
