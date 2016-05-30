@@ -1,24 +1,27 @@
 'use strict';
-function RoutesConfig($urlRouterProvider, $stateProvider) {
-
-  $stateProvider
-    .state('app', {
-      abstract: true,
-      template: '<div ui-view></div>'
-    });
-    
-  $urlRouterProvider.otherwise('/');
-
+/**
+ * @name PortfolioConfig
+ * @description 
+ * Configures the portfolio application. 
+ * Configures the translation settings.
+ * @param {Object} $urlRouterProvider - The urlRouterProvider from AngularJS
+ * @param {Object} $stateProvider - The $stateProvider from Angular UI Router
+ * @param {Object} $translateProvider - The $translateProvider from ng translate
+ */
+function PortfolioConfig($urlRouterProvider, $stateProvider, $translateProvider) {
+  $translateProvider.useStaticFilesLoader({
+    prefix: 'translations/',
+    suffix: '.json'
+  });
+  $translateProvider.preferredLanguage('en');
 }
-angular.module('portfolio.routes', [])
-  .config(RoutesConfig);
 /**
  * @ngdoc overview
  * @name portfolio
  * @description
  * # portfolio
  *
- * Main module of the application.
+ * Main module of the application. Loads all the submodules of the portfolio.
  */
 angular
   .module('portfolio', [
@@ -39,10 +42,4 @@ angular
     'portfolio.projects',
     'portfolio.timeline'
   ])
-  .config(function ($urlRouterProvider, $stateProvider, $translateProvider) {
-    $translateProvider.useStaticFilesLoader({
-      prefix: 'translations/',
-      suffix: '.json'
-    });
-    $translateProvider.preferredLanguage('en');
-  });
+  .config(PortfolioConfig);
