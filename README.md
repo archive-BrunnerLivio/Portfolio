@@ -1,7 +1,6 @@
 Portfolio by Livio Brunner
 ===
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+[Demo](brunnerliv.io)
 
 ##Contacts
 * Developer : [Livio Brunner](mailto:livio.brunner.lb1@gmail.com)
