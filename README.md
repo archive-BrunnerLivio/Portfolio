@@ -1,6 +1,6 @@
 Portfolio by Livio Brunner
 ===
-[Demo](brunnerliv.io)
+[Demo](http://brunnerliv.io)
 
 ##Contacts
 * Developer : [Livio Brunner](mailto:livio.brunner.lb1@gmail.com)
