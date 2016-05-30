@@ -1,14 +1,16 @@
 (function () {
     'use strict';
-
-    function link() {
-    }
+    
+    /**
+     * @name aboutMe
+     * @description Config for the Directive
+     * @returns {Object} directive configuration object
+     */
     function aboutMe() {
         var directive = {
             bindToController: true,
             controller: 'AboutMeController',
             controllerAs: 'ctrl',
-            link: link,
             templateUrl: 'components/about-me/about-me.template.html',
             restrict: 'E',
             replace: true,
@@ -16,10 +18,18 @@
             }
         };
         return directive;
-
-
     }
-
+    
+    /**
+     * @ngdoc directive
+     * @name portfolio.aboutMe.directive:aboutMe
+     * @restrict E
+     * @scope
+     * 
+     * @description
+     * The about-me component. It is a section which presents
+     * a small text about Livio.
+     */
     angular
         .module('portfolio.aboutMe')
         .directive('aboutMe', aboutMe);

@@ -1,3 +1,4 @@
+// style for the projects component
 #projects{
     #projects-background{
         z-index:-1;   
@@ -76,7 +77,7 @@
             margin-right:40px;
             margin-top:40px;
             @media #{$medium-and-down}{
-                float:none;
+                float:noneS;
                 width:100%;
                 text-align: center;
                 margin-right:0;

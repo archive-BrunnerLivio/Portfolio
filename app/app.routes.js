@@ -10,14 +10,21 @@ function RoutesConfig($urlRouterProvider, $stateProvider) {
       template: '<div ui-view></div>'
     });
     
+  $stateProvider
+    .state('app.main', {
+      url: '/',
+      templateUrl: 'components/main/main.view.html',
+      controller: 'MainController',
+      controllerAs: 'ctrl'
+    });
   $urlRouterProvider.otherwise('/');
 
 }
 /**
- * ngdoc overview
+ * @ngdoc overview
  * @name portfolio.routes
  * @description
- * #portfolio.routes
+ * # portfolio.routes
  * Configuration for the applications routes
  */
 angular.module('portfolio.routes', [])

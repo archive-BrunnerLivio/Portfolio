@@ -22,6 +22,14 @@ function PortfolioConfig($urlRouterProvider, $stateProvider, $translateProvider)
  * # portfolio
  *
  * Main module of the application. Loads all the submodules of the portfolio.
+ * @requires ui.router
+ * @requires pascalprecht.translate
+ * @requires portfolio.routes
+ * @requires portfolio.main
+ * @requires portfolio.headerSection
+ * @requires portfolio.aboutMe
+ * @requires portfolio.projects
+ * @requires portfolio.timeline
  */
 angular
   .module('portfolio', [

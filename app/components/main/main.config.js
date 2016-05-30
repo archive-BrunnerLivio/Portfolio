@@ -1,19 +1,13 @@
 (function () {
     'use strict';
-
-    function RouteConfig($stateProvider) {
-        
-        $stateProvider
-            .state('app.main', {
-                url: '/',
-                templateUrl: 'components/main/main.view.html',
-                controller: 'MainController',
-                controllerAs: 'ctrl'
-            });
-    }
-    
-    angular.module('portfolio.routes')
-        .config(RouteConfig);
-        
+    /**
+     * @ngdoc overview 
+     * @name portfolio.main
+     * @description
+     * # portfolio.main
+     * 
+     * Module for the main view. The main view presents the whole 
+     * webapplication (onepage).
+     */    
     angular.module('portfolio.main', []);
 })();
