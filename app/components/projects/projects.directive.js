@@ -1,7 +1,9 @@
 (function () {
     'use strict';
 
-
+    /**
+     * Updates the UI
+     */
     function update(element) {
         var $projectsBackground = element.find("#projects-background"),
             $projectsTitle = element.find("#projects-title"),
@@ -13,14 +15,18 @@
         $projects.each(function (index, project) {
             var $project = $(project),
                 $gradientBackground = $project.find(".gradient-background"),
-                opacity = 1 - ($document.scrollTop() - $project.offset().top + $window.height() - ($project.height() / 2)) / $project.offset().top;
-            console.log(index);
+                //The calculation for the opacity of the background
+                opacity = 1 - ($document.scrollTop() - $project.offset().top + $window.height() - ($project.height() / 2)) / $project.offset().top;            
+            //To prevent white screen
             if (index != $projects.length - 1) {
                 $gradientBackground.css("opacity", opacity);
             }
+            
         });
     }
-
+    /**
+     * When the directive is being constructed
+     */
     function link(scope, element) {
         var $document = $(document);
         $document.scroll(function () {
@@ -28,6 +34,10 @@
         });
         update(element);
     }
+    /**
+     * Config for the Directive
+     * @returns {Object} directive configuration object
+     */
     function projects() {
         var directive = {
             bindToController: true,
