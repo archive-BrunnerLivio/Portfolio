@@ -31,11 +31,15 @@
     /**
      * @name link
      * @description Gets called when the projects directive is constructed
+     * Updates the directive, everytime the "scroll" or "touchemove" event is fired.
      */
     function link(scope, element) {
         var $document = $(document);
         $document.scroll(function () {
             update(element);
+        });
+        $document.on('touchmove', function(e){
+            update(element); 
         });
         update(element);
     }
