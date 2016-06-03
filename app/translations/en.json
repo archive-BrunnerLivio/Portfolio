@@ -20,5 +20,17 @@
         "silvieundwieni":{
             "description":"My mother and her boyfriend went to Australia for 3 months. They wanted to share their adventure on a blog, so I created one with wordpress."
         }
+    },
+    "timeline":{
+        "apprenticeship" :{
+            "title": "Roche Diagnostics International AG",
+            "subtitle":"Apprenticeship as an application engineer",
+            "story":"I started my apprenticeship with the age of 15. In the first two years I learned a lot about C#, MVC, WPF and Team Foundation Server. With 17 I got confronted with a Linux environment and got used to a lot of technologies like git, AngularJS and Docker."
+        },
+        "school": {
+            "title": "Middle school",
+            "subtitle": "Self-taught web developer",
+            "story": "I got my first experience with programming when I was around 13 years old. With the help of youtube tutorials and websites, I tried to build websites using HTML, CSS, JavaScript and PHP. Additionaly, I passed the First Certificate English, my first diploma."
+        }
     }
 }

@@ -1,3 +1,58 @@
 // style for the timeline component
 #timeline{
+    background-color:#EFEFEF;
+    .timeline-node{
+        background-color:white;
+        width:calc(100% - 40px);
+        min-height:350px;
+        padding:50px 20px;
+        border-bottom:5px solid $primary-color;
+        position:relative;
+        &-content{
+            width:450px;
+            margin:auto;
+            @media #{$medium-and-down}{
+                width:100%;    
+            }
+        }
+        &-date{
+            text-align:center;
+            color:$primary-color;
+            font-weight:bold;
+        }
+        h3{
+            font-size:28px;
+            margin:10px 0;
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+            color:#878787;
+        }
+        p{
+            font-size:20px;
+            margin-top:30px;
+            color:#757575;
+            text-align: center;
+        }
+        &:not(:last-child){
+            // arrow        
+            &::before{
+                top: 100%;
+                left: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: rgba(136, 183, 213, 0);
+                border-top-color:$primary-color;
+                border-width: 20px;
+                margin-left: -20px;
+                z-index:1;
+            }
+        }
+        
+    }
 }
