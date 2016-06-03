@@ -12,22 +12,30 @@
             $projectsTitle = element.find('#projects-title'),
             $document = $(document),
             $window = $(window),
-            $projects = $('.project');
+            $projects = $('.project'),
+            $timelineOverlay = element.find('#timeline-overlay'),
+            elementBottom = element.offset().top + element.height();
         $projectsBackground.css('opacity', 1 - ($document.scrollTop() - $projectsTitle.offset().top + $window.height()) / $projectsTitle.offset().top);
 
         $projects.each(function (index, project) {
             var $project = $(project),
                 $gradientBackground = $project.find('.gradient-background'),
                 //The calculation for the opacity of the background
-                opacity = 1 - ($document.scrollTop() - $project.offset().top + $window.height() - ($project.height() / 2)) / $project.offset().top;            
+                opacity = 1 - ($document.scrollTop() - $project.offset().top + $window.height() - ($project.height() / 2)) / $project.offset().top;
             //To prevent white screen
             if (index !== $projects.length - 1) {
                 $gradientBackground.css('opacity', opacity);
             }
-            
+
         });
+        var bottom = elementBottom  + $window.height() / 2;
+        if($window.scrollTop() + $window.height() > elementBottom){
+            $timelineOverlay.css('opacity', ($window.scrollTop() + $window.height() - bottom) / ($window.scrollTop() + $window.height() * 1.5 - bottom) * 2.5);
+        } else{
+            $timelineOverlay.css('opacity', 0);
+        }
     }
-    
+
     /**
      * @name link
      * @description Gets called when the projects directive is constructed
@@ -38,12 +46,12 @@
         $document.scroll(function () {
             update(element);
         });
-        $document.on('touchmove', function(e){
-            update(element); 
+        $document.on('touchmove', function (e) {
+            update(element);
         });
         update(element);
     }
-    
+
     /**
      * @name projects
      * @description Config for the Directive
@@ -63,7 +71,7 @@
         };
         return directive;
     }
-    
+
     /**
      * @ngdoc directive
      * @name portfolio.projects.directive:projects
