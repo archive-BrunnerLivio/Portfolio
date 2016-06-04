@@ -13,9 +13,8 @@
         vm.scrollToAnchor = function (anchorId) {
             if ($location.hash() !== anchorId) {
                 $location.hash(anchorId);
-            } else {
-                $anchorScroll();
             }
+            $anchorScroll();
         };
     }
     /**

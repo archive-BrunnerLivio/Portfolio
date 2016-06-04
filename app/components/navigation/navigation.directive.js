@@ -25,10 +25,10 @@
                 var $window = $(window);
                 $(scope.ctrl.navigationItems).each(function (index, navigationItem) {
                     var $section = $('#' + navigationItem.sectionId);
-                    if ($section.offset() !== null) {
+                    if ($section.offset() !== undefined) {
                         if ($window.scrollTop() + $window.height() > $section.offset().top + $window.height() / 2 &&
                             $window.scrollTop() + $window.height() < $section.offset().top + $section.height() + $window.height() / 2) {
-                            history.pushState(null, null, '#' + navigationItem.sectionId);
+                            history.pushState(null, null, '/#/' + navigationItem.sectionId);
                         }
                     }
 
