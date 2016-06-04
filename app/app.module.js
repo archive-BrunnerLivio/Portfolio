@@ -30,6 +30,7 @@ function PortfolioConfig($urlRouterProvider, $stateProvider, $translateProvider)
  * @requires portfolio.aboutMe
  * @requires portfolio.projects
  * @requires portfolio.timeline
+ * @requires portfolio.navigation
  */
 angular
   .module('portfolio', [
@@ -48,6 +49,7 @@ angular
     'portfolio.headerSection',
     'portfolio.aboutMe',
     'portfolio.projects',
-    'portfolio.timeline'
+    'portfolio.timeline',
+    'portfolio.navigation'
   ])
   .config(PortfolioConfig);
