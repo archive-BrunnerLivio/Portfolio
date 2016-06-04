@@ -1,16 +1,41 @@
 (function () {
     'use strict';
-    /**
-     * @name link
-     * @description Gets called when the timeline directive is constructed 
-     */
-    function link(scope, element, attrs) {
-    }
+
     /**
      * @name navigation
      * @returns {Object} The configuration object for the navigation directive
      */
-    function navigation() {
+    function navigation($location, $timeout) {
+        /**
+         * @name link
+         * @description Gets called when the timeline directive is constructed 
+         * Updates the location hash, while scrolling through the sections.
+         */
+        function link(scope) {
+            // Updates hash when scroll through sections
+            $timeout(function () {
+                var $window = $(window);
+
+                $window.scroll(update);
+                $window.on('touchmove', update);
+
+            });
+
+            function update() {
+                var $window = $(window);
+                $(scope.ctrl.navigationItems).each(function (index, navigationItem) {
+                    var $section = $('#' + navigationItem.sectionId);
+                    if ($section.offset() !== null) {
+                        if ($window.scrollTop() + $window.height() > $section.offset().top + $window.height() / 2 &&
+                            $window.scrollTop() + $window.height() < $section.offset().top + $section.height() + $window.height() / 2) {
+                            history.pushState(null, null, '#' + navigationItem.sectionId);
+                        }
+                    }
+
+                });
+            }
+
+        }
         var directive = {
             bindToController: true,
             controller: 'NavigationController',
@@ -19,8 +44,8 @@
             restrict: 'E',
             scope: {
             },
-            replace:true,
-            templateUrl:'components/navigation/navigation.template.html'
+            replace: true,
+            templateUrl: 'components/navigation/navigation.template.html'
         };
         return directive;
     }

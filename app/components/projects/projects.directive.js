@@ -46,7 +46,7 @@
         $document.scroll(function () {
             update(element);
         });
-        $document.on('touchmove', function (e) {
+        $document.on('touchmove', function () {
             update(element);
         });
         update(element);
