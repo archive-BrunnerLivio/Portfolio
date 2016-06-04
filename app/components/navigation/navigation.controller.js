@@ -11,7 +11,6 @@
         ];
 
         vm.scrollToAnchor = function (anchorId) {
-            console.log(anchorId);
             if ($location.hash() !== anchorId) {
                 $location.hash(anchorId);
             } else {
