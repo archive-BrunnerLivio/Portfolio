@@ -2,19 +2,19 @@
 #projects{
     position: relative;
     #projects-background{
-        z-index:-1;   
+        z-index:-2;   
         background-color: #7a1fa2;
         @include filter-gradient(#7a1fa2, #ffeb3b, horizontal);
         @include background-image(linear-gradient(left top,  #7a1fa2 0%,#ffeb3b 100%));
     }
     #bierbendiger-background{
-        z-index:-2;   
+        z-index:-3;   
         background-color: #5c6bc0;
         @include filter-gradient(#388e3c, #5c6bc0, horizontal);
         @include background-image(linear-gradient(right top,#388e3c 0%,#5c6bc0 100%));
     }
     #silvieundwieni-background{
-        z-index: -3;
+        z-index: -4;
         background-color: #4e342e;
         @include filter-gradient(#4e342e, #6593de, horizontal);
         @include background-image(linear-gradient(left top,  #4e342e 0%,#6593de 100%));

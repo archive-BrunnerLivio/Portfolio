@@ -1,3 +1,88 @@
+$navigationColors : (#536CFE, #6A3FB9, #9C27B0, #984D8A, #C59366);
+$index : 1;
 #navigation{
-    
+    nav{
+        position:absolute;
+        left:0px;
+        top:45px;
+        z-index:999;    
+        height:50px;
+        display:block;
+        @media #{$medium-and-down}{
+            width:100%;
+            top:0;
+            z-index:0;
+        }
+        ul, li{
+            height:100%;
+        }
+        .navigationItem{
+            float:left;
+            width:110px;
+            font-size:20px;
+            position:relative;
+            @media #{$medium-and-down}{
+                padding:20px 0;
+                width:20%;
+                display:block;
+                font-size:14px; 
+                color:white;
+                height:100%;
+                @include transition(0.5s $swiftOutBesizer background-color);
+                &:hover{
+                    background-color:rgba(255,255,255,0.2);
+                }
+            }
+            @media #{$large-and-up}{
+                @each $color in $navigationColors{
+                    &:nth-child(#{$index}) {
+                        color:$color;
+                        &::after{
+                            background-color:$color;
+                        }
+                    }
+                    $index : $index + 1;
+                }
+                &:hover{
+                    &::after{
+                        width:80%;
+                    }
+                }
+                &::after{
+                    width:0;
+                    @include transition(0.5s width $swiftOutBesizer);
+                    content:"";
+                    display:block;
+                    height:2px;
+                    position:absolute;
+                    top:50%;
+                    @include translate(-50%, -50%);
+                    left:50%;
+                }
+            }
+            span{
+                cursor:pointer;
+                display:block;
+                text-align: center;
+                font-family: 'Oswald', sans-serif;
+                text-transform: uppercase;
+                height:100%;
+                width:100%;
+                
+            }
+        }
+    }
+    //maybe for the future
+    .logo{
+        position:absolute;
+        top:10px;
+        right:10px;
+        width:80px;
+        height:80px;
+        background-size:100%;
+        z-index:2;
+        @media #{$medium-and-down}{
+            display:none;
+        }
+    }
 }

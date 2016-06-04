@@ -1,20 +1,21 @@
 (function() {
 'use strict';
-    function navigationItem(name, sectionId){
-        
+    function NavigationItem(name, sectionId){
+        this.name = name;
+        this.sectionId = sectionId;
     }
     
-    function navigationItemFactory() {
-        return navigationItem;
+    function NavigationItemFactory() {
+        return NavigationItem;
     }
     
     /**
      * @ngdoc service
-     * @name portfolio.navigation.service:navigationItem
+     * @name portfolio.navigation.service:NavigationItem
      * @param {string} name Name of the Navigation Item
-     * @param {string} sectionId Id of the section, for example #head.
+     * @param {string} sectionId Id of the section, for example head (=#head).
      */
     angular
         .module('portfolio.navigation')
-        .factory('navigationItem', navigationItemFactory);
+        .factory('NavigationItem', NavigationItemFactory);
 })();
