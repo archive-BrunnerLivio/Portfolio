@@ -33,7 +33,7 @@
 
         function onScroll() {
             // if is user in view
-            if ($window.scrollTop() + $window.height() >= element.offset().top - 200) {
+            if ($window.scrollTop() + $window.height() >= element.offset().top ) {
                 element.addClass("active");
 
             } else {
