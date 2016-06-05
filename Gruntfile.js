@@ -419,6 +419,12 @@ module.exports = function (grunt) {
             cwd: 'docs',
             src: '**',
             dest: '<%= yeoman.dist %>/docs'
+          },
+          {
+            expand: true,
+            cwd: 'bower_components/apache-server-configs/dist',
+            src: '.htaccess',
+            dest: '<%= yeoman.dist %>'
           }]
       },
       styles: {
