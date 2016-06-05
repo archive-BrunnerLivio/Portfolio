@@ -32,5 +32,8 @@
             "subtitle": "Self-taught web developer",
             "story": "I got my first experience with programming when I was around 13 years old. With the help of youtube tutorials and websites, I tried to build websites using HTML, CSS, JavaScript and PHP. Additionaly, I passed the First Certificate English, my first diploma."
         }
+    },
+    "contact":{
+        "title": "Contact"
     }
 }

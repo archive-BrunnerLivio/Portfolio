@@ -9,9 +9,9 @@
             $contactBackground = element.find("#contact-background"),
             $paths = element.find("path"),
             hasUpdated = false;
-        function update() {
+        function updateTriangle() {
             var $window = $(window),
-                portraitBounds = { x: $contactPortrait.offset().left, y: $contactPortrait.offset().top, width: $contactPortrait.width() - $contactPortrait.width() / 3, height: $contactPortrait.height() - $contactPortrait.height() / 4 };
+                portraitBounds = { x: $contactPortrait.offset().left, y: $contactPortrait.offset().top, width: $contactPortrait.width() - $contactPortrait.width() / 3, height: $contactPortrait.height() - $contactPortrait.height() / 3 };
 
 
             $paths.each(function (index, element) {
@@ -30,24 +30,28 @@
                 }
             });
         }
-        $window.scroll(function () {
+
+        function onScroll() {
             // if is user in view
             if ($window.scrollTop() + $window.height() >= element.offset().top - 200) {
-                $contactBackground.addClass("active");
+                element.addClass("active");
 
             } else {
-                $contactBackground.removeClass("active");
+                element.removeClass("active");
             }
-            if ($window.scrollTop() + $window.height() >= element.offset().top + $contactPortrait.height()) {
+            if ($window.scrollTop() + $window.height() >= element.offset().top + $contactPortrait.height() / 2) {
                 //prevent unessesary calculations
                 if (!hasUpdated) {
-                    update();
+                    updateTriangle();
+                    element.addClass("in-view");
                     hasUpdated = true;
                 }
             }
-        });
-        $window.resize(update);
-        update();
+        }
+        $window.scroll(onScroll);
+        $window.on('touchemove', onScroll);
+        $window.resize(updateTriangle);
+        updateTriangle();
 
 
     }

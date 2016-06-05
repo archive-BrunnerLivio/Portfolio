@@ -1,30 +1,102 @@
 #contact{
     position:relative;
-    height:1000px;
-    &-background{
-        display:none;
-        &.active{
-            display:block;
+    height:800px;
+    color:white;
+    @media #{$medium-and-down}{
+        height:500px;
+    }
+    &-title{
+        font-family:'Oswald', sans-serif;
+        font-size:120px;
+        text-transform: uppercase;
+        opacity:0;
+        @include transition(1s ease-in-out opacity);
+        @media #{$medium-and-down}{
+            font-size:90px;
+        }
+        @media #{$small-and-down}{
+            font-size:70px;
         }
     }
+    &-container{
+        position:absolute;
+        right:10%;
+        top:30%;
+        @include translateY(-50%);
+        &-links{
+            margin: 10px 25px;
+            font-size:26px;
+            a{
+                margin:0 10px 0 0;
+            }
+            @media #{$medium-and-down}{
+                margin: 10px 5px;
+                font-size: 23px;   
+            }
+            @media #{$small-and-down}{
+                margin: 10px 5px;
+                font-size: 18px;  
+            }
+        }
+        @media #{$medium-and-down}{
+            right:10px;
+        }
+        @media #{$small-and-down}{
+            right:0;
+            top:20px;
+            @include translateY(0); 
+            width:100%;
+            text-align:center;
+        }
+        
+    }
+    &.active{
+        #contact-background{
+            display:block;
+        }
+        
+    }
+    &.in-view{
+        #contact-title{
+            opacity:1;
+        }
+    }
+    &-background{
+        display:none;
+        height:100%;
+    }
     &-triangle{
-        position:fixed;
+        position:relative;
         width:100%;
-        height:100vh;
+        height:100%;
         top:0;
         left:0;
         z-index:-4;
         
     }
     &-portrait{
-        position:fixed;
+        position:absolute;
         width:400px;
-        
         z-index:-4;
         height:600px;
         left:20%;
         top:50%;
         @include translateY(-50%);
+        @media #{$medium-and-down}{
+            width:200px;
+            height:350px;
+            left:10%;
+        }
+        @media #{$small-and-down}{
+            width:200px;
+            
+            height:250px;
+            @include translateY(0);
+            @include translateX(-50%);
+            top:150px;
+            left:50%;
+            position:absolute;
+        }
     }
     path{
         opacity:1;

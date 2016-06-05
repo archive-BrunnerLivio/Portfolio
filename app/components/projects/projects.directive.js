@@ -15,25 +15,31 @@
             $projects = $('.project'),
             $timelineOverlay = element.find('#timeline-overlay'),
             elementBottom = element.offset().top + element.height();
-        $projectsBackground.css('opacity', 1 - ($document.scrollTop() - $projectsTitle.offset().top + $window.height()) / $projectsTitle.offset().top);
+        if ($window.scrollTop() < element.height() + element.offset().top) {
+            element.addClass("active");
+            $projectsBackground.css('opacity', 1 - ($document.scrollTop() - $projectsTitle.offset().top + $window.height()) / $projectsTitle.offset().top);
 
-        $projects.each(function (index, project) {
-            var $project = $(project),
-                $gradientBackground = $project.find('.gradient-background'),
-                //The calculation for the opacity of the background
-                opacity = 1 - ($document.scrollTop() - $project.offset().top + $window.height() - ($project.height() / 2)) / $project.offset().top;
-            //To prevent white screen
-            if (index !== $projects.length - 1) {
-                $gradientBackground.css('opacity', opacity);
+            $projects.each(function (index, project) {
+                var $project = $(project),
+                    $gradientBackground = $project.find('.gradient-background'),
+                    //The calculation for the opacity of the background
+                    opacity = 1 - ($document.scrollTop() - $project.offset().top + $window.height() - ($project.height() / 2)) / $project.offset().top;
+                //To prevent white screen
+                if (index !== $projects.length - 1) {
+                    $gradientBackground.css('opacity', opacity);
+                }
+
+            });
+            var bottom = elementBottom + $window.height() / 2;
+            if ($window.scrollTop() + $window.height() > elementBottom) {
+                $timelineOverlay.css('opacity', ($window.scrollTop() + $window.height() - bottom) / ($window.scrollTop() + $window.height() * 1.5 - bottom) * 2.5);
+            } else {
+                $timelineOverlay.css('opacity', 0);
             }
-
-        });
-        var bottom = elementBottom  + $window.height() / 2;
-        if($window.scrollTop() + $window.height() > elementBottom){
-            $timelineOverlay.css('opacity', ($window.scrollTop() + $window.height() - bottom) / ($window.scrollTop() + $window.height() * 1.5 - bottom) * 2.5);
-        } else{
-            $timelineOverlay.css('opacity', 0);
+        } else {
+            element.removeClass("active");
         }
+
     }
 
     /**
