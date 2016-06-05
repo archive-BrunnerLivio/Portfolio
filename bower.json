@@ -19,7 +19,8 @@
     "trianglify": "^0.4.0"
   },
   "devDependencies": {
-    "angular-mocks": "^1.4.0"
+    "angular-mocks": "^1.4.0",
+    "apache-server-configs": "^2.14.0"
   },
   "appPath": "app",
   "moduleName": "portfolio"
