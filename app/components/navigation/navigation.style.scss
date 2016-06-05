@@ -1,5 +1,8 @@
+// colors for each navigation points
 $navigationColors : (#536CFE, #6A3FB9, #9C27B0, #984D8A, #C59366);
+// counter for the navigation colors
 $index : 1;
+// the navigation component
 #navigation{
     nav{
         position:absolute;
@@ -16,11 +19,13 @@ $index : 1;
         ul, li{
             height:100%;
         }
+        // one navigation item
         .navigationItem{
             float:left;
             width:110px;
             font-size:20px;
             position:relative;
+            // transparent-white background on hover for medium & small devices
             @media #{$medium-and-down}{
                 padding:20px 0;
                 width:20%;
@@ -33,7 +38,9 @@ $index : 1;
                     background-color:rgba(255,255,255,0.2);
                 }
             }
+            // underline on hover for large devices
             @media #{$large-and-up}{
+                // goes through each color and sets it for the underline and the navigation item
                 @each $color in $navigationColors{
                     &:nth-child(#{$index}) {
                         color:$color;
@@ -43,11 +50,13 @@ $index : 1;
                     }
                     $index : $index + 1;
                 }
+                // on hover, make the underline
                 &:hover{
                     &::after{
                         width:80%;
                     }
                 }
+                // the underline for the navigation item
                 &::after{
                     width:0;
                     @include transition(0.5s width $swiftOutBesizer);
