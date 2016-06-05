@@ -11,7 +11,7 @@
         height:100%;
         top:0;
         left:0;
-        z-index:-8;
+        z-index:1;
         display:none;
     }
     &-title{
@@ -32,6 +32,7 @@
         right:10%;
         top:30%;
         @include translateY(-50%);
+        z-index:3;
         &-links{
             margin: 10px 25px;
             font-size:26px;
@@ -52,7 +53,7 @@
         }
         @media #{$small-and-down}{
             right:0;
-            top:20px;
+            top:70px;
             @include translateY(0); 
             width:100%;
             text-align:center;
@@ -79,13 +80,13 @@
         height:100%;
         top:0;
         left:0;
-        z-index:-8;
+        z-index:1;
         
     }
     &-portrait{
         position:absolute;
         width:400px;
-        z-index:-8;
+        z-index:1;
         height:600px;
         left:20%;
         top:50%;
@@ -97,11 +98,10 @@
         }
         @media #{$small-and-down}{
             width:200px;
-            
             height:250px;
             @include translateY(0);
             @include translateX(-50%);
-            top:150px;
+            top:200px;
             left:50%;
             position:absolute;
         }
