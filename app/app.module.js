@@ -50,6 +50,7 @@ angular
     'portfolio.aboutMe',
     'portfolio.projects',
     'portfolio.timeline',
-    'portfolio.navigation'
+    'portfolio.navigation',
+    'portfolio.contact'
   ])
   .config(PortfolioConfig);
