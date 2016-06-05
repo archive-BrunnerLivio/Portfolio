@@ -8,9 +8,6 @@
      */
     function aboutMe() {
         var directive = {
-            bindToController: true,
-            controller: 'AboutMeController',
-            controllerAs: 'ctrl',
             templateUrl: 'components/about-me/about-me.template.html',
             restrict: 'E',
             replace: true,

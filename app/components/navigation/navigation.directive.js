@@ -20,7 +20,11 @@
                 $window.on('touchmove', update);
 
             });
-
+            /**
+             * @name update
+             * @description if is over one section, it changes the url to the corresponding section
+             * for example if the user is over the contact section, the url changes to #contact
+             */
             function update() {
                 var $window = $(window);
                 $(scope.ctrl.navigationItems).each(function (index, navigationItem) {

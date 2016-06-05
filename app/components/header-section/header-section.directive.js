@@ -8,9 +8,6 @@
      */
     function headerSection() {
         var directive = {
-            bindToController: true,
-            controller: 'HeaderSectionController',
-            controllerAs: 'ctrl',
             restrict: 'E',
             templateUrl: 'components/header-section/header-section.template.html',
             replace: true,

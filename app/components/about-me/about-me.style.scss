@@ -29,6 +29,7 @@
             display:inline-block;
             position:relative;
             &::after{
+                // Purple Underlining
                 position:absolute;
                 background: transparentize($primary-color, 0.7);
                 display:block;

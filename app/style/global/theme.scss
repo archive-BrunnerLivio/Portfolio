@@ -1,11 +1,13 @@
+// Reset
 html, body, .container, [ui-view]{
     width:100%;
     height:100%;
 }
+// Titles
 h1,h2,h3,h4,h5,h6,p,a,span,div{
     font-family:$roboto;
 }
-//Section Title
+// Section Title
 .section-title{
     color:white;
     font-family:$monospace;
@@ -16,12 +18,12 @@ h1,h2,h3,h4,h5,h6,p,a,span,div{
         margin-top:0px;   
     }
 }
-//Paragraph default
+// Paragraph default
 p{
     line-height: 32px;
     font-size:24px;
 }
-//Link Style
+// Link Style
 a{
     color:#BBDEFB;
     text-decoration: none;
@@ -53,7 +55,7 @@ a{
         }
     }
 }
-//Selection Color
+// Selection Color
 ::selection {
     background-color: $primary-color;
     color: white;
@@ -62,7 +64,7 @@ a{
     background-color: $primary-color;
     color: white;
 }
-//Hint transperentize
+// Hint transperentize
 .hint{
     &::after{
         background:rgba(0,0,0,0.5);

@@ -1,4 +1,4 @@
-//Media queries
+// Media queries
 $small-screen-up: 601px !default;
 $medium-screen-up: 993px !default;
 $large-screen-up: 1201px !default;
@@ -12,13 +12,15 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
 
+// Bezier
 $swiftOutBesizer: cubic-bezier(.55,0,.1,1);
 
-
+// Colors
 $dark-grey:#383838;
 $blue:#2196F3;
 $blue-700: #1976D2;
 $primary-color: #7B1FA2;
 
+// Fonts
 $monospace : 'Roboto Mono', monospace;
 $roboto:'Roboto', Arial, sans-serif;
