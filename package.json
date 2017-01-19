@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "npm run build",
     "start": "live-server dist/",
-    "build:copy": "cpx \"src/**/*\" dist ",
-    "build": "npm run build:copy && webpack",
+    "build": "webpack",
     "start:dev": "webpack-dev-server --content-base src/"
   },
   "repository": {
@@ -32,7 +31,7 @@
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
-    "cpx": "^1.5.0",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
     "live-server": "^1.2.0",
     "node-sass": "^4.2.0",

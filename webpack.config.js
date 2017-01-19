@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var minimize = process.argv.indexOf('--minimize') !== -1;
 module.exports = {
@@ -20,11 +21,23 @@ module.exports = {
         ]
     },
     output: {
-        filename: 'assets/index.js',
-        path: path.join(__dirname, './dist')
+        filename: 'app/index.js',
+        path: path.join(__dirname, './dist'),
+        publicPath: './assets'
     },
     resolve: {
         extensions: ['', '.js', '.sass'],
         root: [path.join(__dirname, './src')]
-    }
+    },
+    plugins: [
+        new CopyWebpackPlugin([
+            {
+                from: 'src/assets',
+                to: 'assets'
+            },
+            {
+                from: 'src/index.html',
+            }
+        ])
+    ]
 };
