@@ -1,12 +1,13 @@
 const webpack = require('webpack');
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const appPath = './src/index.js';
+const outputPath = 'bundle.js';
 
 var minimize = process.argv.indexOf('--minimize') !== -1;
 module.exports = {
-    entry: {
-        app: ['./src/app/app']
-    },
+    devtool: 'source-map',
+    entry: './src/index.js',
     module: {
         loaders: [
             {
@@ -17,17 +18,19 @@ module.exports = {
             {
                 test: /\.scss$/,
                 loaders: ["style-loader", "css-loader", "sass-loader"]
+            },
+            {
+                test: /\.html$/,
+                loader: "file?name=[name].[ext]",
             }
         ]
     },
     output: {
-        filename: 'app/index.js',
-        path: path.join(__dirname, './dist'),
-        publicPath: './assets'
+        filename: outputPath,
+        path: path.join(__dirname, './dist')
     },
-    resolve: {
-        extensions: ['', '.js', '.sass'],
-        root: [path.join(__dirname, './src')]
+    devServer: {
+        contentBase: path.join(__dirname, 'src'),
     },
     plugins: [
         new CopyWebpackPlugin([
