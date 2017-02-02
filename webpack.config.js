@@ -9,8 +9,7 @@ module.exports = {
     devtool: 'source-map',
     entry: './src/index.js',
     module: {
-        loaders: [
-            {
+        loaders: [{
                 test: /\.js$/,
                 exclude: 'node_modules',
                 loaders: ['babel-loader']
@@ -22,7 +21,12 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: "file?name=[name].[ext]",
+            },
+            {
+                test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+                loader: "file-loader"
             }
+
         ]
     },
     output: {
@@ -33,8 +37,7 @@ module.exports = {
         contentBase: path.join(__dirname, 'src'),
     },
     plugins: [
-        new CopyWebpackPlugin([
-            {
+        new CopyWebpackPlugin([{
                 from: 'src/assets',
                 to: 'assets'
             },
