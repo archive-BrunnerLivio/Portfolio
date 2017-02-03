@@ -5,19 +5,67 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(http://www.doggifpage.com/gifs/142.gif);
-    background-position: center;
+    &.active {
+        &:before {
+            opacity: 1;
+        }
+        &:after {
+            opacity: 0;
+        }
+    }
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #00c3ff;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #00c3ff, #ffff1c);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #00c3ff, #ffff1c);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        transition: 0.5s ease-in-out opacity;
+    }
+    &:after {
+        background: #1e3c72;
+        background: -moz-linear-gradient(top, #1e3c72 0%, #244b82 100%);
+        background: -webkit-linear-gradient(top, #1e3c72 0%, #244b82 100%);
+        background: linear-gradient(to bottom, #1e3c72 0%, #244b82 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e3c72', endColorstr='#244b82', GradientType=0);
+        width: 100%;
+        height: 100%;
+        display: block;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        transition: 0.5s ease-in-out opacity;
+    }
     .card {
-        width: 90%;
-        height: 90%;
-        background-size: cover;
         transform-style: preserve-3d;
-        position: relative;
+        width: 400px;
+        height: 600px;
+        text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url(http://www.doggifpage.com/gifs/142.gif);
-        background-position: center;
-        opacity: 0.85;
+        position: relative;
+        transform: perspective(1000px);
+        color: white;
+        h1 {
+            transform: translateZ(50px);
+        }
+        hr {
+            transform: translateZ(20px);
+        }
+        .floating-border {
+            border: 10px solid white;
+            width: 80%;
+            height: 80%;
+            transform: translateZ(30px);
+            position: absolute;
+        }
     }
 }
