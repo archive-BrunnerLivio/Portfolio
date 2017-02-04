@@ -6,9 +6,6 @@
     justify-content: center;
     align-items: center;
     &.active {
-        &:before {
-            opacity: 1;
-        }
         &:after {
             opacity: 0;
         }
@@ -18,23 +15,15 @@
         display: block;
         width: 100%;
         height: 100%;
-        background: #00c3ff;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to left, #00c3ff, #ffff1c);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to left, #00c3ff, #ffff1c);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        opacity: 0;
+        background: $accent;
+        background: -webkit-linear-gradient(to left, $primary, $accent);
+        background: linear-gradient(to left, $primary, $accent);
+        opacity: 1;
         position: absolute;
-        z-index: -1;
-        transition: 0.5s ease-in-out opacity;
+        z-index: -2;
     }
     &:after {
-        background: #1e3c72;
-        background: -moz-linear-gradient(top, #1e3c72 0%, #244b82 100%);
-        background: -webkit-linear-gradient(top, #1e3c72 0%, #244b82 100%);
-        background: linear-gradient(to bottom, #1e3c72 0%, #244b82 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e3c72', endColorstr='#244b82', GradientType=0);
+        background: $primary;
         width: 100%;
         height: 100%;
         display: block;
