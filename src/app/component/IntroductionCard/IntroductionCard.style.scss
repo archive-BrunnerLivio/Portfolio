@@ -1,0 +1,31 @@
+#introduction-card {
+    cursor: pointer;
+    transform-style: preserve-3d;
+    width: 400px;
+    height: 600px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: perspective(1000px);
+    color: white;
+    &.active {
+        cursor: default;
+    }
+    h1 {
+        transform: translateZ(50px);
+    }
+    hr {
+        transform: translateZ(20px);
+    }
+    &::after {
+        content: '';
+        display: block;
+        border: 10px solid white;
+        width: 80%;
+        height: 80%;
+        transform: translateZ(30px);
+        position: absolute;
+    }
+}
