@@ -1,7 +1,7 @@
 @import 'util/variables';
 @import 'util/reset';
 @import 'global/layout';
-@import 'component/card';
-@import 'component/LineMaker/LineMaker.style';
-@import 'component/IntroductionCard/IntroductionCard.style';
+@import 'components/LineMaker/LineMaker.style';
+@import 'components/IntroductionCard/IntroductionCard.style';
+@import 'components/Loader/Loader.style';
 @import 'site/home';
